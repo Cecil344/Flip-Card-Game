@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {flip} from '../actions';//don't forget to go to Actions
+import {shuffle} from '../actions';
 
 // This component uses Redux state. It will be updated automatically whenever
 // the Redux state changes.
-class FlipButton extends Component {
+class ShuffleButton extends Component {
     render() {
       return (
-            <button onClick={this.props.flip} className="FlipButton">
-                Flip
+            <button onClick={this.props.prev} disabled={this.props.disabled} className="ShuffleButton">
+                Shuffle
             </button>
         );
     }
 }
 
+
 const mapActionsToProps = {
-  flip: flip
+  shuffle: shuffle
 };
 
-export default connect(null, mapActionsToProps)(FlipButton);
+export default connect(null, mapActionsToProps)(ShuffleButton);

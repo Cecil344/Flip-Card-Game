@@ -10,3 +10,14 @@ export function prev() {
     type: "PREV"
   };
 }
+
+export function flip() {
+  return {
+    type: "FLIP"
+  };
+}
+export function shuffle() {
+  return {
+    type: "SHUFFLE"
+  };
+}

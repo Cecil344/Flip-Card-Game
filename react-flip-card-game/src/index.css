@@ -58,9 +58,50 @@
     margin: 0 24px;
 }*/
 .Card {
-  border: 1px solid black;
+  border: 1px solid lightblue;
   margin: 30px 80px;
   padding: 30px;
   font-size: 150%;
+  text-align: center;
+}
+.ButtonHolder {
+  text-align: center;
+  background-color: black;
+}
+.PrevButton {
+  padding: 10px;
+  margin: 10px;
+  background-color: lightblue;
+  color: black;
+}
+.NextButton {
+  padding: 10px;
+  margin-right: 10px;
+  background-color: lightblue;
+  color: black;
+}
+.FlipButton {
+  padding: 10px;
+  margin-right: 10px;
+  background-color: lightblue;
+  color: black;
+}
+.ShuffleButton {
+  padding: 10px;
+  margin-right: 10px;
+  background-color: lightblue;
+  color: black;
+}
+.App {
+  background-color: gray;
+  border: white solid 20px;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 10%;
+}
+.Card {
+  background-color: white;
+}
+.Title {
   text-align: center;
 }

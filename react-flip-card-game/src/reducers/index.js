@@ -5,7 +5,10 @@ const INITIAL_STATE = {
     cards: [
       {front: "A front", back: "A back"},
       {front: "B front", back: "B back"},
-      {front: "C front", back: "C back"}
+      {front: "C front", back: "C back"},
+      {front: "D front", back: "D back"},
+      {front: "E front", back: "E back"},
+      {front: "F front", back: "F back"}
     ]
 }
 
@@ -20,10 +23,21 @@ export default function(state = INITIAL_STATE, action) {
             return Object.assign({}, state, {
                 currentCardIndex: state.currentCardIndex + 1
             });
-            case "PREV":
+        case "PREV":
                 return Object.assign({}, state, {
                     currentCardIndex: state.currentCardIndex - 1
                 });
+        case "Flip":
+                if (state.isFront) {
+                  return Object.assign({},state, {
+                    isFront: true
+                  });
+                } else {
+                  return Object.assign({}, state, {
+                    isFront: false
+                  });
+                };
+
         default:
             // If we don't recognize the action, don't change the state.
             return state;
