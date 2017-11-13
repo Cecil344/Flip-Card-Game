@@ -27,14 +27,14 @@ export default function(state = INITIAL_STATE, action) {
                 return Object.assign({}, state, {
                     currentCardIndex: state.currentCardIndex - 1
                 });
-        case "Flip":
+        case "FLIP":
                 if (state.isFront) {
                   return Object.assign({},state, {
-                    isFront: true
+                    isFront: false
                   });
                 } else {
                   return Object.assign({}, state, {
-                    isFront: false
+                    isFront: true
                   });
                 };
 
