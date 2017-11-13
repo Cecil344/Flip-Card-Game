@@ -1,8 +1,12 @@
 // This will be the values we start out with when the page loads.
 const INITIAL_STATE = {
-    vanilla: 0,
-    chocolate: 0,
-    strawberry: 0
+    isFront: true,
+    currentCardIndex: 0,
+    cards: [
+      {front: "A front", back: "A back"},
+      {front: "B front", back: "B back"},
+      {front: "C front", back: "C back"}
+    ]
 }
 
 // This one function is the reducer. The reducer is the heart of Redux. It tells
@@ -12,19 +16,17 @@ const INITIAL_STATE = {
 // parameter.
 export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
-        case "VOTE":
-            // if a vote action comes in, modify the state.
-            return vote(state, action.flavor);
+        case "NEXT":
+            return Object.assign({}, state, {
+                currentCardIndex: state.currentCardIndex + 1
+            });
+            case "PREV":
+                return Object.assign({}, state, {
+                    currentCardIndex: state.currentCardIndex - 1
+                });
         default:
             // If we don't recognize the action, don't change the state.
             return state;
     }
-}
 
-function vote(state, flavor) {
-    // Just like plain React, the state is an immutable object. Rather than
-    // changing part of the state, we must replace it.
-    return Object.assign({}, state, {
-        [flavor]: state[flavor] + 1
-    });
 }

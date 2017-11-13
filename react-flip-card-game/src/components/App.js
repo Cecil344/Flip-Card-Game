@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import Graph from './Graph';
-import Buttons from './Buttons';
+import Card from "./Card";
+import NextButton from "./NextButton";
+import PrevButton from "./PrevButton";
 
 class App extends Component {
 
   render() {
     return (
       <div className="App">
-        <Graph />
-        <Buttons />
+        <Card />
+        <NextButton />
+        <PrevButton />
       </div>
     );
   }

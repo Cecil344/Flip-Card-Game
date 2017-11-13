@@ -1,4 +1,4 @@
-body {
+/*body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -56,4 +56,11 @@ body {
 .Buttons button {
     font-size: 30px;
     margin: 0 24px;
+}*/
+.Card {
+  border: 1px solid black;
+  margin: 30px 80px;
+  padding: 30px;
+  font-size: 150%;
+  text-align: center;
 }
